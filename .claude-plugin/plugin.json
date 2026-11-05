@@ -1,0 +1,8 @@
+{
+  "name": "demo",
+  "description": "Turn your project into a premium 30-90 second product demo video: records the real app, follows your brand, adds captions, music and voiceover.",
+  "version": "1.0.0",
+  "author": { "name": "Oluwafemi Akinruntan" },
+  "license": "MIT",
+  "keywords": ["video", "demo", "product-demo", "launch", "skill"]
+}

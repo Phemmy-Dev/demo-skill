@@ -1,0 +1,12 @@
+{
+  "name": "demo",
+  "description": "You built it. Now show people how it works.",
+  "owner": { "name": "Oluwafemi Akinruntan" },
+  "plugins": [
+    {
+      "name": "demo",
+      "source": "./",
+      "description": "Turn your project into a premium 30-90 second product demo video."
+    }
+  ]
+}
