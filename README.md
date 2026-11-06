@@ -55,6 +55,40 @@ From your project folder:
 | `--built-with <tool>` | off; adds an honest "how it was built" chapter |
 | `--cutdown` | off; adds a 20s vertical version |
 
+Type values without brackets: `--duration 60`, not `--duration <60>`; `--voice am_michael`, not `--voice[am_michael]`. The `< >` and `[ ]` above only mark where a value goes.
+
+### Every option at once
+
+```text
+/demo --duration 60 --features "mark attendance, admin dashboard, weekly report" --style-ref reference/launch.mp4 --tone polished --format landscape --device both --voice am_michael --built-with "Claude Code" --cutdown
+```
+
+Or say it in plain English, which works just as well:
+
+```text
+/demo a 60 second polished demo of attendance, the admin dashboard and the weekly report, styled like reference/launch.mp4, desktop and phone, with an American male voice, show it was built with Claude Code, plus a vertical cut
+```
+
+Leave out anything you don't care about and `/demo` picks it for you.
+
+### Choosing a voice
+
+`--voice` on its own uses `af_heart`. Add a name to pick another. The first letter is the accent (`a` American, `b` British), the second is the voice (`f` female, `m` male):
+
+| Voice | Sounds like |
+|---|---|
+| `af_heart` | American female, warm (default) |
+| `af_bella` | American female, bright |
+| `af_sarah` | American female, calm |
+| `am_michael` | American male, steady |
+| `am_adam` | American male, deeper |
+| `bf_emma` | British female, clear |
+| `bf_isabella` | British female, soft |
+| `bm_george` | British male, classic narrator |
+| `bm_lewis` | British male, relaxed |
+
+Not sure? Ask "list the voices" during a run, or describe one ("a calm British woman") and it picks the closest. Voices are [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M), running locally.
+
 You get a `demo-output/` folder with `demo.mp4`, `demo.jpg`, `captions.srt`, `share-copy.txt`, `credits.txt`, `demo-plan.md` and `brand.md`.
 
 ## Match a reference video
