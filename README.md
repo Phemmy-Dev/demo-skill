@@ -18,14 +18,14 @@
 **Claude Code:**
 
 ```text
-/plugin marketplace add <your-github-username>/<repo-name>
+/plugin marketplace add Phemmy-Dev/demo-skill
 /plugin install demo@demo
 ```
 
 **Any other agent** (Cursor, Codex, Copilot, Gemini CLI, opencode and more), via the [`skills`](https://github.com/vercel-labs/skills) CLI:
 
 ```bash
-npx skills add https://github.com/<your-github-username>/<repo-name> --skill demo
+npx skills add https://github.com/Phemmy-Dev/demo-skill --skill demo
 ```
 
 Add `-g` to install it for every project.
