@@ -5,6 +5,7 @@
 `/demo` is an agent skill that turns your project into a premium 30-90 second product demo. It runs your real app, records the features that matter, and cuts them into a launch-ready video with captions, music, optional voiceover and share copy. No screen recording, no editing.
 
 - **Records the real app:** web apps, Electron/desktop apps and live sites, driven automatically with Playwright.
+- **Desktop or mobile:** shows your web app in its real phone layout, in a phone frame with touch taps, or desktop and phone side by side.
 - **Gets past login:** signs up local test accounts (one per role), fills the app with fictional data, and records every screen already signed in.
 - **Shows what you pick:** `--features "attendance, admin dashboard"`, or it picks the strongest moments itself.
 - **Wears your brand:** pulls your colors, fonts, logo and copy from the code.
@@ -29,7 +30,7 @@ npx skills add https://github.com/<your-github-username>/<repo-name> --skill dem
 
 Add `-g` to install it for every project.
 
-**Manual:** copy `skills/demo/` into your agent's skills folder (for Claude Code, `~/.claude/skills/demo/`) and restart.
+**Manual:** copy the whole `skills/demo/` folder (including `references/`) into your agent's skills folder (for Claude Code, `~/.claude/skills/demo/`) and restart.
 
 ## Use
 
@@ -49,11 +50,36 @@ From your project folder:
 | `--style-ref <video>` | `reference/` folder if present |
 | `--tone polished\|default\|deadpan\|cinematic\|app-store` | auto |
 | `--format landscape\|vertical\|square` | auto |
+| `--device desktop\|mobile\|both` | auto: shows the app on desktop, a phone, or both |
 | `--voice [voice]` | off (captions always on) |
 | `--built-with <tool>` | off; adds an honest "how it was built" chapter |
 | `--cutdown` | off; adds a 20s vertical version |
 
 You get a `demo-output/` folder with `demo.mp4`, `demo.jpg`, `captions.srt`, `share-copy.txt`, `credits.txt`, `demo-plan.md` and `brand.md`.
+
+## Match a reference video
+
+Got a demo whose style you love? `/demo` can match it in your own brand.
+
+1. **Put the video in a `reference/` folder** inside your project, then run `/demo`. It finds it automatically.
+2. **Or point to it:** `/demo --style-ref "path/to/video.mp4"` (a link works too; it asks before downloading).
+
+It studies the cuts, frames and pacing, writes what it learned to `demo-output/style-notes.md`, then builds your video with that style and your app's colors, fonts and logo.
+
+| It copies | It never copies |
+|---|---|
+| Pacing and structure | Their logo or brand name |
+| Camera zooms, 3D tilts, floating cards | Their colors as a brand |
+| How text animates in | Their copy |
+| Transitions and cursor clicks | Their music or footage |
+
+**Tips**
+- Pick a reference like your project: an app demo for an app demo, not a movie trailer for a dashboard.
+- 30-60 seconds works best.
+- Use one with sound if you want the music to match its feel; without audio, it matches the visuals only.
+- Download YouTube videos yourself with a downloader you trust and pass the file.
+- Read `style-notes.md` after a run. If something's off, tell it ("more zoom-ins like the reference").
+- Don't commit someone else's video: add `reference/` to your project's `.gitignore`.
 
 ## Requirements
 
