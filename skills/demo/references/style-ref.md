@@ -12,7 +12,7 @@ Use `--style-ref`, or the first video in `reference/` or `style-ref/` in the pro
 
 Write `style-notes.md`: structure (chapter by chapter, with timings), pacing (shot length, where it speeds up and holds), camera (push-ins, zoom to an element, pans, 3D tilt, parallax), how the UI is presented (full-screen, floating cards, device frames, tight crops of one control), type (size, weight, case, how it animates in: typewriter, word by word, mask reveal), transitions, cursor and click treatment, light/dark rhythm, and the sound.
 
-Borrow the **grammar**: structure, pacing, camera moves, layout ideas, type animation, transitions. Never borrow the **identity**: its logo, brand name, colors as a brand, copy, characters, music or footage. The video still wears the product's brand from `brand.md`. If the reference's palette mood would suit a product with no brand of its own, ask before using it.
+Borrow the **grammar**: structure, pacing, camera moves, layout ideas, type animation, transitions. Never borrow the **identity**: its logo, brand name, colors as a brand, copy, characters, music or footage. The "never" list in SKILL.md still applies to anything the reference does (a dot-pill in the reference is still a dot-pill). The video still wears the product's brand from `brand.md`. If the reference's palette mood would suit a product with no brand of its own, ask before using it.
 
 If the style reference has audio, match its feel (genre, tempo, energy), never its track. Its structure wins over the default chapter shape. It refines the tone's pacing and motion but doesn't override a tone that fits the audience.
 

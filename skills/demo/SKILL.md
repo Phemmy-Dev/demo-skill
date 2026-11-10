@@ -167,6 +167,7 @@ The test: would a viewer believe a product-design studio made this? Everything b
 **Never (these read as AI slop):**
 - Generic purple-to-blue gradients, glowing orbs, particle fields, lens flares, glitch effects, or "tech" grids that aren't from the product's brand.
 - Emoji, clip-art icons, stock illustrations, or AI-generated imagery standing in for the product.
+- Dot-pills: a capsule with a small glowing or colored dot before the text ("● Now live", "● Your whole day on one calm screen"), especially on a soft glow halo. Put that line in plain type or a simple pill with no dot, unless the exact badge is in the product's own UI.
 - Text slapped over busy footage with no scrim or space; drop shadows on text; more than one line animating in at once.
 - Everything centered, everything the same size, every transition the same crossfade.
 - Bouncy or overshooting easings on everything; motion that starts and stops at the same instant across the frame.
